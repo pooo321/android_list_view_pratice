@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<TextView-->
+        <!--android:id="@+id/re_name"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="姓名: "/>-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/re_age"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="年齡: "/>-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/re_sex"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="性別: "/>-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/re_major"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="科系: "/>-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvResult"
+        android:textSize="16sp"
+        android:layout_marginTop="12dp"
+        android:lines="5"
+        android:layout_below="@+id/tvResultTitle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="回主選單"
+        android:onClick="onBackClick"/>
+
+
+
+</LinearLayout>

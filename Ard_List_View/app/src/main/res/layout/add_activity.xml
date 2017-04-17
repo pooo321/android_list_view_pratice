@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="32dp" />
+
+    <TextView
+        android:id="@+id/sub_title"
+        android:layout_width="match_parent"
+        android:layout_height="32dp" />
+
+    <TableLayout
+        android:id="@+id/tb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name:"
+            android:id="@+id/name"
+            android:layout_centerHorizontal="true"
+            android:layout_column="0"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/name_input"
+            android:hint=""
+            android:inputType="text"
+            android:maxLength="4"
+            />
+
+        </TableRow>
+
+        <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Age:"
+            android:id="@+id/age"
+            android:layout_centerHorizontal="true"
+            android:layout_column="0"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/age_input"
+            android:layout_toLeftOf="@+id/age"
+            android:hint=""
+            android:inputType="number"
+            android:maxLength="3"
+            />
+
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gender:"
+                android:id="@+id/age"
+                android:layout_centerHorizontal="true"
+                android:layout_column="0"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:id="@+id/sex_input"
+                android:hint=""
+                android:inputType="text"
+                />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Major:"
+                android:id="@+id/major"
+                android:layout_centerHorizontal="true"
+                android:layout_column="0"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:id="@+id/major_input"
+                android:hint=""
+                android:inputType="text"
+                android:maxLength="6"
+                />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tb"
+        android:layout_gravity="right"
+        android:text="新增"
+        android:onClick="onSubmitClick"
+        />
+
+
+
+</LinearLayout>
