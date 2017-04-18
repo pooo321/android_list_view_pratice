@@ -19,9 +19,9 @@ public class getList {
 
         if ( first ) {
             memberList = new ArrayList<>();
-            memberList.add(new Member("張三", 20, "男", "資管"));
-            memberList.add(new Member("李四", 22, "男", "資工"));
-            memberList.add(new Member("瑪麗", 18, "女", "企管"));
+            memberList.add(new Member("張三", "20", "男", "資管"));
+            memberList.add(new Member("李四", "22", "男", "資工"));
+            memberList.add(new Member("瑪麗", "18", "女", "企管"));
         }
 
         return memberList;

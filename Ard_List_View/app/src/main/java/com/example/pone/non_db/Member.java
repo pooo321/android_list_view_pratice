@@ -10,12 +10,12 @@ import java.util.List;
 
 public class Member implements Serializable {
     private String name;
-    private int age;
+    private String age;
     private String sex;
     private String major;
 
 
-    public Member(String name, int age, String sex, String major) {
+    public Member(String name, String age, String sex, String major) {
         this.name = name;
         this.age = age;
         this.sex = sex;
@@ -41,9 +41,9 @@ public class Member implements Serializable {
         this.name = name;
     }
 
-    public int getAge() { return age; }
+    public String getAge() { return age; }
 
-    public void setAge(int age) { this.age = age; }
+    public void setAge(String age) { this.age = age; }
 
     public String getSex() { return sex; }
 
