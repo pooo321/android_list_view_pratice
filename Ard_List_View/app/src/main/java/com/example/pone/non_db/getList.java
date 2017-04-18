@@ -13,7 +13,6 @@ public class getList {
 
     public getList() {
         super();
-
     }
 
     public List<Member> initList(boolean first) {

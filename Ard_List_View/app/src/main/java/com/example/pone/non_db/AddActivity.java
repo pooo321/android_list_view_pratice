@@ -66,7 +66,7 @@ public class AddActivity extends AppCompatActivity {
 
 //        list.insertMember(member);
 
-        Intent intent = new Intent(AddActivity.this, ResultActivity.class);
+        Intent intent = new Intent(AddActivity.this, MainActivity.class);
         Bundle bundle = new Bundle();
 
         bundle.putSerializable("member", member);

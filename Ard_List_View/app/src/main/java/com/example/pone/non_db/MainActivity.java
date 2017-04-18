@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Adapter;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -36,8 +38,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        ListView list = (ListView) findViewById(R.id.list);
+        final ListView list = (ListView) findViewById(R.id.list);
         list.setAdapter(new ListAdapter(this));
+
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(view.getContext(), DetailActivity.class);
+                Bundle bundle = new Bundle();
+
+
+                Member member = (Member)parent.getItemAtPosition(position);
+                bundle.putSerializable("member", member);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
 
         TextView result = (TextView) findViewById(R.id.result);
         result.setText("共" + list.getCount() + "筆資料");
@@ -89,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
 
             return convertView;
         }
+
     }
 
     private void getMember() {
@@ -105,5 +122,4 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-
 }
